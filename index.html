@@ -1,0 +1,33 @@
+<html>
+
+    <head>
+        <title>Gullu Meeting</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body background="meeting-background-1.png">
+        <center>
+        <div class="btn btn-success"></div>
+        <h1 class="btn btn- title">Gullu Meeting</h1>
+        <p id="notification" hidden></p>
+        <div class="entry-modal" id="entry-modal">
+            <p>Create or Join Meeting</p>
+            <input id="room-input" class="room-input" placeholder="Enter Room ID">
+            <div>
+                <button onclick="createRoom()">Create Room</button>
+                <button onclick="joinRoom()">Join Room</button>
+            </div>
+        </div>
+        <div class="btn btn-info meet-area">
+            <!-- Remote Video Element-->
+            <video id="remote-video"></video>
+            <!-- Local Video Element-->
+            <video id="local-video"></video>
+        </div>
+    </center>
+    </body>
+
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="script.js"></script>
